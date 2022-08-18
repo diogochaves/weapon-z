@@ -4,7 +4,7 @@ const generate_pdf = require('./lib/pdf-generator')
 const get_template = require('./lib/template')
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const hbs = create();
 
 app.use(express.json());
