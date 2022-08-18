@@ -10,6 +10,10 @@ const hbs = create();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get('/', (req, res) => {
+	res.send('Weapon-Z!')
+})
+
 app.post('/certificado', async function (req, res) {
 	await get_template(req.body.template);
 
